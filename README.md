@@ -25,5 +25,5 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Layouts
 
-[Layout](public\layout.jpg)
-[diagram](public\diagram.jpg)
+![Layout](public/layout.jpg)
+![diagram](public/diagram.jpg)
