@@ -19,4 +19,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Friday, July 7th
 
 - 8:30: initialize app + readme
-- 9:10 [stripe research](https://stripe.com/docs/payments/quickstart?client=next&platform=web)
+- 9:10: [stripe research](https://stripe.com/docs/payments/quickstart?client=next&platform=web)
+- 9:40: Commerce research
+- 10:10: Layouts planning
+
+## Layouts
+
+[Layout](public\layout.jpg)
+[diagram](public\diagram.jpg)
