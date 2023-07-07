@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content">
+    <footer className="footer p-10 bg-lightDark text-gray-300">
       <div>
         <span className="footer-title">Commerce.Store</span>
         <p className="text-white">

@@ -25,7 +25,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 11:00: Footer Start / still figuring out next js
 - 12:00: Nav Bar Start
 - 1:15: Nav bar fix / need to figure out state in next js
-- 2:00: client component sidebar test/
+- 2:00: client component sidebar test
+- 2:30 Working Sidebar + color changes
 
 ## Layouts
 

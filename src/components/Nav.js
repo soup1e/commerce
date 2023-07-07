@@ -12,7 +12,7 @@ export default function Nav() {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-dark">
       <div className="flex-1">
         <Link href="/" className="btn btn-ghost normal-case text-xl">
           Commerce
@@ -61,11 +61,22 @@ export default function Nav() {
       </div>
 
       {cartOpen && (
-        <div className="sidebar fixed top-0 right-0 z-50 h-screen w-80 bg-base-200 text-base-content">
-          <ul className="flex flex-col top p-4">
-            <span className="font-bold text-lg">Items: {itemsCount}</span>
-            <span className="text-info">Subtotal: $99</span>
-          </ul>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-dark bg-opacity-50"
+          onClick={toggleCart}
+        >
+          <div
+            className="sidebar fixed top-0 right-0 z-50 h-screen w-80 bg-dark"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="btn btn-square btn-ghost" onClick={toggleCart}>
+              Button
+            </button>
+            <ul className="p-4">
+              <span className="font-bold text-lg">Items: {itemsCount}</span>
+              <span className="text-info">Subtotal: $99</span>
+            </ul>
+          </div>
         </div>
       )}
     </div>
