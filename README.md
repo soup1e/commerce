@@ -29,6 +29,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 2:30: Working Sidebar + color changes
 - 3:00: Nav and Cart Changes
 - 3:30: next js research
+- 4:00: learning about server components
 
 ## Layouts
 
