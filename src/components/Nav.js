@@ -1,8 +1,15 @@
+"use client";
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Nav() {
-  const itemsCount = 4;
+  const [cartOpen, setCartOpen] = useState(false);
+  const [itemsCount, setItemsCount] = useState(4);
+
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+  };
 
   return (
     <div className="navbar bg-base-100">
@@ -34,7 +41,7 @@ export default function Nav() {
             />
           </svg>
         </button>
-        <button className="btn btn-square btn-ghost">
+        <button className="btn btn-square btn-ghost" onClick={toggleCart}>
           <div className="indicator">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +59,15 @@ export default function Nav() {
           </div>
         </button>
       </div>
+
+      {cartOpen && (
+        <div className="sidebar fixed top-0 right-0 z-50 h-screen w-80 bg-base-200 text-base-content">
+          <ul className="flex flex-col top p-4">
+            <span className="font-bold text-lg">Items: {itemsCount}</span>
+            <span className="text-info">Subtotal: $99</span>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
