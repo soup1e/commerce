@@ -14,7 +14,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Items should be stored in SupaBase or NextJS backend
 - User auth should be handled by Auth0
 - Multi-page App with Landing, Categories, Marketplace for User Items, Cart, Checkout and Order Comp
+- Light and dark mode styling
 
 ## Friday, July 7th
 
 - 8:30: initialize app + readme
+- 9:10 [stripe research](https://stripe.com/docs/payments/quickstart?client=next&platform=web)
