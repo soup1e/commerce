@@ -22,8 +22,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 9:10: [stripe research](https://stripe.com/docs/payments/quickstart?client=next&platform=web)
 - 9:40: Commerce research
 - 10:10: Layouts planning
+- 11:00: Footer Start / still figuring out next js
+- 12:00: Nav Bar Start
 
 ## Layouts
 
 ![Layout](public/layout.jpg)
-![diagram](public/diagram.jpg)
+![Diagram](public/diagram.jpg)
