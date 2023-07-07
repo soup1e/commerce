@@ -1,34 +1,20 @@
+# Next Js E-Commerce App
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+### ToDo
 
-First, run the development server:
+- Plan out app Layout and create plan
+- Research (New Next Router, Ssr, Stripe, Auth0, SupaBase/Next backend)
+- Stretch: Switch to TypeScript, Mobile App
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### The App
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- E-Commerce Website where users can add things to cart and checkout using Stripe
+- Items should be stored in SupaBase or NextJS backend
+- User auth should be handled by Auth0
+- Multi-page App with Landing, Categories, Marketplace for User Items, Cart, Checkout and Order Comp
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Friday, July 7th
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 8:30: initialize app + readme
