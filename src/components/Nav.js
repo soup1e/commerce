@@ -13,13 +13,49 @@ export default function Nav() {
 
   return (
     <div className="navbar bg-dark">
-      <div className="flex-1">
+      <div className="navbar-start">
         <Link href="/" className="btn btn-ghost normal-case text-xl">
           Commerce
         </Link>
       </div>
 
-      <div className="flex-none gap-4 flex items-center">
+      <div class="navbar-start hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li tabindex="0">
+            <details>
+              <summary>Shop</summary>
+              <ul class="p-2">
+                <li>
+                  <Link href="/collections/all">All</Link>
+                </li>
+                <li>
+                  <Link href="/collections/keyboards">Keyboards</Link>
+                </li>
+                <li>
+                  <Link href="/collections/keycaps">Keycaps</Link>
+                </li>
+                <li>
+                  <Link href="/collections/switches">Switches</Link>
+                </li>
+                <li>
+                  <Link href="/collections/switches">Other</Link>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <Link href="/cbout">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="navbar-end flex-none gap-4 flex items-center">
         <button className="btn btn-square btn-ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"

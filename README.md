@@ -4,9 +4,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### ToDo
 
-- Plan out app Layout and create plan
 - Research (New Next Router, Ssr, Stripe, Auth0, SupaBase/Next backend)
 - Stretch: Switch to TypeScript, Mobile App
+- Figure out backend
+- Pages with Dynamic Routes
+- Rendering pattern
+- NavBar hover instead of click
+- Navbar moblie
+- Light mode
 
 ### The App
 
@@ -30,6 +35,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 3:00: Nav and Cart Changes
 - 3:30: next js research
 - 4:00: learning about server components
+- 4:30: Started ItemDisplay.js
+- 5:00: Types of Items Routes in Nav Bar
 
 ## Layouts
 
