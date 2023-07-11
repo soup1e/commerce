@@ -46,3 +46,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ![Layout](public/layout.jpg)
 ![Diagram](public/diagram.jpg)
+
+# Resources used
+
+[DaisyUI](https://daisyui.com)
+[Icons](https://heroicons.com)
