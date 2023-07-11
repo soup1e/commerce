@@ -12,22 +12,85 @@ export default function Nav() {
   };
 
   return (
-    <div className="navbar bg-dark">
-      <div className="navbar-start">
-        <Link href="/" className="btn btn-ghost normal-case text-xl">
+    <div className="navbar bg-dark items-center text-white ">
+      <div className="navbar-start hidden lg:flex">
+        <Link
+          href="/"
+          className="btn btn-ghost normal-case text-xl lg:flex hidden"
+        >
           Commerce
         </Link>
       </div>
 
-      <div class="navbar-start hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+      <div className="navbar-start lg:hidden">
+        <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li tabIndex="0">
+              <details>
+                <summary>Shop</summary>
+                <ul className="p-2">
+                  <li>
+                    <Link href="/collections/all">All</Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/keyboards">Keyboards</Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/keycaps">Keycaps</Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/switches">Switches</Link>
+                  </li>
+                  <li>
+                    <Link href="/collections/switches">Other</Link>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <Link href="/market">Community Market</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li tabindex="0">
+          <li tabIndex="0">
             <details>
               <summary>Shop</summary>
-              <ul class="p-2">
+              <ul className="p-2">
                 <li>
                   <Link href="/collections/all">All</Link>
                 </li>
@@ -47,7 +110,10 @@ export default function Nav() {
             </details>
           </li>
           <li>
-            <Link href="/cbout">About</Link>
+            <Link href="/market">Community Market</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>
@@ -55,8 +121,8 @@ export default function Nav() {
         </ul>
       </div>
 
-      <div className="navbar-end flex-none gap-4 flex items-center">
-        <button className="btn btn-square btn-ghost">
+      <div className="navbar-end gap-4 flex-end">
+        <Link className="btn btn-square btn-ghost" href="/search">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -70,8 +136,8 @@ export default function Nav() {
               clipRule="evenodd"
             />
           </svg>
-        </button>
-        <button className="btn btn-square btn-ghost">
+        </Link>
+        <Link className="btn btn-square btn-ghost" href="/login">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -84,7 +150,7 @@ export default function Nav() {
               clipRule="evenodd"
             />
           </svg>
-        </button>
+        </Link>
         <button className="btn btn-square btn-ghost" onClick={toggleCart}>
           <div className="indicator">
             <svg
@@ -110,7 +176,7 @@ export default function Nav() {
           onClick={toggleCart}
         >
           <div
-            className="sidebar fixed top-0 right-0 z-50 h-screen w-80  bg-dark"
+            className="sidebar fixed bottom-0 right-0 z-50 h-screen w-80 bg-dark flex flex-col justify-between"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center p-2 border-b-2 border-gray-900">
@@ -134,6 +200,19 @@ export default function Nav() {
                   />
                 </svg>
               </button>
+            </div>
+            <div className="flex flex-col justify-between border-t-2 border-gray-900">
+              <div className="flex justify-between p-3 text-gray-400 font-normal">
+                <span>Shipping</span>
+                <span>$Cost</span>
+              </div>
+              <div className="flex justify-between p-3 text-gray-400 font-bold">
+                <span>Subtotal</span>
+                <span>$Cost</span>
+              </div>
+              <div className="flex justify-center py-2">
+                <button className="btn btn-square px-16">Checkout</button>
+              </div>
             </div>
           </div>
         </div>

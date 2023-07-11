@@ -10,7 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Pages with Dynamic Routes
 - Rendering pattern
 - NavBar hover instead of click
-- Navbar moblie
+- Navbar Mobile
 - Light mode
 
 ### The App
@@ -37,6 +37,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 4:00: learning about server components
 - 4:30: Started ItemDisplay.js
 - 5:00: Types of Items Routes in Nav Bar
+
+## Monday, July 10th
+
+- 6:00 Nav bar mobile and Routes // Needs Refactor
 
 ## Layouts
 
