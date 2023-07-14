@@ -1,21 +1,6 @@
 import React from "react";
 
 export default function ItemDisplay() {
-  const items = [
-    {
-      name: "Gateron Pinks",
-      description: "Gateron Pinks",
-      isInStock: true,
-      price: 4.99,
-    },
-    {
-      name: "Gateron Yellows",
-      description: "Gateron Yellows",
-      isInStock: true,
-      price: 4.5,
-    },
-  ];
-
   return (
     <div>
       {items.map((item) => (
