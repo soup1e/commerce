@@ -44,7 +44,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Friday, July 14th
 
-- 8:00: Plan to Research Backend stuff, Refactor Nav, Page Links, Page Layout and render.
+- 8:00: Plan to Research Backend stuff, Refactor Nav, Page Links, Page Layout and render, 404 page
 
 ## Layouts
 
