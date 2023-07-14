@@ -5,6 +5,7 @@ import ItemCard from "./ItemCard";
 
 function ItemList() {
   const [products, setProducts] = useState([]);
+  const [prices, setPrices] = useState([]);
 
   useEffect(() => {
     fetchProducts();
@@ -13,7 +14,9 @@ function ItemList() {
   const fetchProducts = async () => {
     try {
       const response = await axios.get("/api/products");
-      setProducts(response.data);
+      setProducts(response.data.products);
+      setPrices(response.data.prices);
+
       console.log(response.data);
     } catch (error) {
       console.error(error);
@@ -22,12 +25,11 @@ function ItemList() {
 
   return (
     <div className="flex flex-wrap justify-center bg-dark">
-      {products &&
-        products.map((item) => <ItemCard key={item.id} item={item} />)}
+      {products.map((product) => (
+        <ItemCard key={product.id} product={product} prices={prices} />
+      ))}
     </div>
   );
 }
 
 export default ItemList;
-
-// <ItemCard key={item.id} item={item} />
