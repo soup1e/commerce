@@ -54,6 +54,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 12:00: nav bar dropdown always on top, experimenting with out of stock banner, page header
 - 1:30: Dynamic Product page start, need to research
 - 2:10: Stripe Setup // Working GET products
+- 2:40: Displaying Correct Information Need to fix prices
 
 ## Layouts
 
