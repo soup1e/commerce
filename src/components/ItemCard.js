@@ -22,9 +22,6 @@ function ItemCard({ item }) {
           </div>
         </Link>
       </div>
-      {/* <div className="alert max-w-full m-4 flex justify-center">
-        <span className="text-white">Out of Stock</span>
-      </div> */}
     </div>
   );
 }
