@@ -58,6 +58,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 3:10: Displaying Correct Prices formatted
 - 3:30: nextjs research
 - 4:00: still trying to figure out dynamic routes
+- 4:20: renders dynamic item on page, Not sure if api call every time link is pressed is best practice
 
 ## Layouts
 
