@@ -3,84 +3,126 @@
     "id": 1,
     "product": "Kbd67 LITE R3",
     "price": 99,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "kbd67-lite-r3",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 2,
     "product": "TOFU60 2.0",
     "price": 109,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "tofu60-2-0",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 3,
     "product": "D60LITE PC KEYBOARD KIT",
     "price": 99,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "d60lite-pc-keyboard-kit",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 4,
     "product": "TOFU65 2.0",
     "price": 133,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "tofu65-2-0",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 5,
     "product": "TIGER LITE KEYBOARD KIT",
     "price": 129,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "tiger-lite-keyboard-kit",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 6,
     "product": "ODIN R3 MECHANICAL KEYBOARD KIT",
     "price": 406,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "odin-r3-mechanical-keyboard-kit",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 7,
     "product": "MARK II MECHANICAL KEYBOARD KIT",
     "price": 89,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "mark-ii-mechanical-keyboard-kit",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 8,
     "product": "ODIN 75 MECHANICAL KEYBOARD KIT",
     "price": 319,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "odin-75-mechanical-keyboard-kit",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 9,
     "product": "PLUTO",
     "price": 159,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "pluto",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 10,
     "product": "D45 V2 KEYBOARD KIT",
     "price": 199,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "d45-v2-keyboard-kit",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 11,
     "product": "TET",
     "price": 246,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "tet",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 12,
     "product": "TOFU65 2.0",
     "price": 208,
-    "type": "Keyboard"
+    "type": "Keyboard",
+    "permalink": "tofu65-2-0",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 13,
     "product": "GATERON YELLOW LINEAR SWITCHES",
     "price": 1.25,
-    "type": "Switches"
+    "type": "Switches",
+    "permalink": "gateron-yellow-linear-switches",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   },
   {
     "id": 14,
     "product": "WOB PBT DOUBLESHOT KEYCAPS",
     "price": 29,
-    "type": "Keycaps"
+    "type": "Keycaps",
+    "permalink": "wob-pbt-doubleshot-keycaps",
+    "thumbnail": "/placehold.jpg",
+    "images": []
   }
 ]
