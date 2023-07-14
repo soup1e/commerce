@@ -4,14 +4,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### ToDo
 
-- Research (New Next Router, Ssr, Stripe, Auth0, SupaBase/Next backend)
+- SEARCH AND ITEM TYPES
+- ADD TO CART
+- CART CHECKOUT WITH STRIPE
+- REMAINING /ROUTES AND 404
+- AUTH AND ADMIN PAGES
+- UPDATE PRODUCTS SITE NAME AND BLANK FILLER TEXT
+- UPDATE LANDING PAGE AND FOOTER
+
 - Stretch: Switch to TypeScript, Mobile App
-- Figure out backend
-- Pages with Dynamic Routes
-- Rendering pattern
-- NavBar hover instead of click
-- Navbar Mobile
-- Light mode
 
 ### The App
 
@@ -59,6 +60,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 3:30: nextjs research
 - 4:00: still trying to figure out dynamic routes
 - 4:20: renders dynamic item on page, Not sure if api call every time link is pressed is best practice
+- 5:00: Simple product page layout AND deployment
 
 ## Layouts
 

@@ -16,8 +16,6 @@ function ItemList() {
       const response = await axios.get("/api/products");
       setProducts(response.data.products);
       setPrices(response.data.prices);
-
-      console.log(response.data);
     } catch (error) {
       console.error(error);
     }
