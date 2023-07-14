@@ -40,7 +40,11 @@ function SidebarCart({ toggleCart, itemsCount }) {
             <span>$Cost</span>
           </div>
           <button className="flex justify-center py-2">
-            <Link href="/cart" className="btn btn-square px-16">
+            <Link
+              href="/cart"
+              onClick={toggleCart}
+              className="btn btn-square px-16"
+            >
               Checkout
             </Link>
           </button>
