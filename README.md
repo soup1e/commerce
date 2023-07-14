@@ -49,6 +49,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 9:00: NextJs research + Sidebar Fix and layout refactor
 - 9:30: Initial Landing page
 - 10:30: Item Card Initial, Trying to get Landing page carousel
+- 11:10: Item Card Styling, Hard Coded Json for products for now later backend
 
 ## Layouts
 

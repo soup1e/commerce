@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "product": "Kbd67 LITE R3",
+    "price": 99,
+    "type": "Keyboard"
+  },
+  {
+    "id": 2,
+    "product": "TOFU60 2.0",
+    "price": 109,
+    "type": "Keyboard"
+  },
+  {
+    "id": 3,
+    "product": "D60LITE PC KEYBOARD KIT",
+    "price": 99,
+    "type": "Keyboard"
+  },
+  {
+    "id": 4,
+    "product": "TOFU65 2.0",
+    "price": 133,
+    "type": "Keyboard"
+  },
+  {
+    "id": 5,
+    "product": "TIGER LITE KEYBOARD KIT",
+    "price": 129,
+    "type": "Keyboard"
+  },
+  {
+    "id": 6,
+    "product": "ODIN R3 MECHANICAL KEYBOARD KIT",
+    "price": 406,
+    "type": "Keyboard"
+  },
+  {
+    "id": 7,
+    "product": "MARK II MECHANICAL KEYBOARD KIT",
+    "price": 89,
+    "type": "Keyboard"
+  },
+  {
+    "id": 8,
+    "product": "ODIN 75 MECHANICAL KEYBOARD KIT",
+    "price": 319,
+    "type": "Keyboard"
+  },
+  {
+    "id": 9,
+    "product": "PLUTO",
+    "price": 159,
+    "type": "Keyboard"
+  },
+  {
+    "id": 10,
+    "product": "D45 V2 KEYBOARD KIT",
+    "price": 199,
+    "type": "Keyboard"
+  },
+  {
+    "id": 11,
+    "product": "TET",
+    "price": 246,
+    "type": "Keyboard"
+  },
+  {
+    "id": 12,
+    "product": "TOFU65 2.0",
+    "price": 208,
+    "type": "Keyboard"
+  },
+  {
+    "id": 13,
+    "product": "GATERON YELLOW LINEAR SWITCHES",
+    "price": 1.25,
+    "type": "Switches"
+  },
+  {
+    "id": 14,
+    "product": "WOB PBT DOUBLESHOT KEYCAPS",
+    "price": 29,
+    "type": "Keycaps"
+  }
+]
