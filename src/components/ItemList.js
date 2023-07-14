@@ -1,6 +1,6 @@
 import React from "react";
 import ItemCard from "./ItemCard";
-import items from "../../items.json";
+// import items from "../../items.json";
 
 function ItemList() {
   return (

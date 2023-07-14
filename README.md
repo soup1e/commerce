@@ -53,6 +53,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 11:30: updated json, permalink and thumbnail
 - 12:00: nav bar dropdown always on top, experimenting with out of stock banner, page header
 - 1:30: Dynamic Product page start, need to research
+- 2:10: Stripe Setup // Working GET products
 
 ## Layouts
 
