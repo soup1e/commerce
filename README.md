@@ -42,6 +42,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - 6:00 Nav bar mobile and Routes // Needs Refactor
 
+## Friday, July 14th
+
+- 8:00: Plan to Research Backend stuff, Refactor Nav, Page Links, Page Layout and render.
+
 ## Layouts
 
 ![Layout](public/layout.jpg)
