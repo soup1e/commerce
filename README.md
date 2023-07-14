@@ -56,6 +56,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 2:10: Stripe Setup // Working GET products
 - 2:40: Displaying Correct Information Need to fix prices
 - 3:10: Displaying Correct Prices formatted
+- 3:30: nextjs research
 
 ## Layouts
 
