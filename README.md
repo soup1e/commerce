@@ -51,6 +51,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 10:30: Item Card Initial, Trying to get Landing page carousel
 - 11:10: Item Card Styling, Hard Coded Json for products for now later backend
 - 11:30: updated json, permalink and thumbnail
+- 12:00: nav bar dropdown always on top, experimenting with out of stock banner, page header
 
 ## Layouts
 

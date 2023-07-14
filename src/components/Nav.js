@@ -88,7 +88,7 @@ export default function Nav() {
           <li>
             <details>
               <summary>Shop</summary>
-              <ul className="p-2">
+              <ul className="p-2 z-50">
                 <li>
                   <Link href="/collections/all">All</Link>
                 </li>
