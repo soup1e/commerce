@@ -1,5 +1,10 @@
+import ItemCard from "@/components/ItemCard";
 import React from "react";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <ItemCard />
+    </div>
+  );
 }

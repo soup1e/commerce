@@ -48,6 +48,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 8:30: Paths and Nav Refactor
 - 9:00: NextJs research + Sidebar Fix and layout refactor
 - 9:30: Initial Landing page
+- 10:30: Item Card Initial, Trying to get Landing page carousel
 
 ## Layouts
 
@@ -58,3 +59,4 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 [DaisyUI](https://daisyui.com)
 [Icons](https://heroicons.com)
+[Images](https://geekhack.org/index.php?PHPSESSID=7b6pvfn29cprc0naa9uodr81hbc8vj68&board=132.0)
