@@ -1,5 +1,4 @@
 "use client";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import ItemCard from "./ItemCard";
 
@@ -8,24 +7,25 @@ function ItemList() {
   const [prices, setPrices] = useState([]);
 
   useEffect(() => {
-    fetchProducts();
+    fetch(`/api/products`)
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data.products);
+        setPrices(data.prices);
+      })
+      .catch((error) => {
+        console.error("Product not Found", error);
+      });
   }, []);
-
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("/api/products");
-      setProducts(response.data.products);
-      setPrices(response.data.prices);
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   return (
     <div className="flex flex-wrap justify-center bg-dark">
-      {products.map((product) => (
-        <ItemCard key={product.id} product={product} prices={prices} />
-      ))}
+      {products.map((product) => {
+        const price = prices.find(
+          (price) => price.id === product.default_price
+        );
+        return <ItemCard key={product.id} product={product} price={price} />;
+      })}
     </div>
   );
 }

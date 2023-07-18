@@ -24,7 +24,7 @@ export default function Nav() {
       </button>
 
       <div className="navbar-start lg:hidden">
-        <div className="dropdown">
+        <div className="dropdown dropdown-bottom dropdown-hover">
           <label tabIndex={0} className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,10 @@ export default function Nav() {
               />
             </svg>
           </label>
-          <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
             <li>
               <Link href="/">Home</Link>
             </li>
@@ -67,6 +70,7 @@ export default function Nav() {
                 </ul>
               </details>
             </li>
+
             <li>
               <Link href="/market">Community Market</Link>
             </li>
@@ -75,6 +79,13 @@ export default function Nav() {
             </li>
             <li>
               <Link href="/contact">Contact</Link>
+            </li>
+            <div className="divider" />
+            <li>
+              <Link href="/login">Login</Link>
+            </li>
+            <li>
+              <Link href="/search">Search</Link>
             </li>
           </ul>
         </div>
@@ -86,9 +97,12 @@ export default function Nav() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <details>
-              <summary>Shop</summary>
-              <ul className="p-2 z-50">
+            <div className="dropdown dropdown-bottom dropdown-hover">
+              <Link href="/collections/all">Shop</Link>
+              <ul
+                tabIndex={0}
+                className="dropdown-content text-white menu bg-lightDark rounded-lg z-50 p-2 w-52"
+              >
                 <li>
                   <Link href="/collections/all">All</Link>
                 </li>
@@ -105,7 +119,7 @@ export default function Nav() {
                   <Link href="/collections/switches">Other</Link>
                 </li>
               </ul>
-            </details>
+            </div>
           </li>
           <li>
             <Link href="/market">Community Market</Link>
@@ -120,7 +134,10 @@ export default function Nav() {
       </div>
 
       <div className="navbar-end gap-4 flex-end">
-        <Link className="btn btn-square btn-ghost" href="/search">
+        <Link
+          className="btn btn-square btn-ghost hidden md:flex"
+          href="/search"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -135,7 +152,7 @@ export default function Nav() {
             />
           </svg>
         </Link>
-        <Link className="btn btn-square btn-ghost" href="/login">
+        <Link className="btn btn-square btn-ghost hidden md:flex" href="/login">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

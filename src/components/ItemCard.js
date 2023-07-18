@@ -2,10 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function ItemCard({ prices, product }) {
+function ItemCard({ price, product }) {
   const formattedURL = product.name.toLowerCase().replace(/\s+/g, "_");
-
-  const price = prices.find((price) => price.product === product.id);
 
   const unitAmount = (price.unit_amount / 100).toLocaleString("en-US", {
     style: "currency",

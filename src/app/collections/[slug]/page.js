@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Image from "next/image";
 
 function ProductPage({ params }) {
@@ -9,33 +8,39 @@ function ProductPage({ params }) {
 
   useEffect(() => {
     const unformattedUrl = params.slug.toUpperCase().replace(/_/g, " ");
-    axios
-      .get("http://localhost:3000/api/products")
-      .then((response) => {
-        const data = response.data;
-        const matchedProduct = data.products.find(
+    fetch(`/api/products`)
+      .then((response) => response.json())
+      .then((data) => {
+        const { products, prices } = data;
+
+        const findProduct = products.find(
           (product) => product.name.toUpperCase() === unformattedUrl
         );
-        setProduct(matchedProduct);
 
-        const matchedPrice = data.prices.find(
-          (price) => price.product === matchedProduct.id
+        setProduct(findProduct);
+
+        const findPrice = prices.find(
+          (price) => price.id === matchedProduct.default_price
         );
-        const unitAmountFormat = (
-          matchedPrice.unit_amount / 100
-        ).toLocaleString("en-US", {
-          style: "currency",
-          currency: "USD",
-        });
+
+        const unitAmountFormat = (findPrice.unit_amount / 100).toLocaleString(
+          "en-US",
+          {
+            style: "currency",
+            currency: "USD",
+          }
+        );
         setPrice(unitAmountFormat);
       })
       .catch((error) => {
-        console.error("Error fetching products:", error);
+        console.error("Product not Found", error);
       });
   }, [params.slug]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return (
+      <div className="min-h-screen bg-lightDark text-white">Loading...</div>
+    );
   }
 
   return (
