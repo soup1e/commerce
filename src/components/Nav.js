@@ -2,11 +2,13 @@
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
+import { useCartContext } from "@/components/CartContext";
+
 import SidebarCart from "./SidebarCart";
 
 export default function Nav() {
   const [cartOpen, setCartOpen] = useState(false);
-  const [itemsCount, setItemsCount] = useState(4);
+  const { cartItems } = useCartContext();
 
   const toggleCart = () => {
     setCartOpen(!cartOpen);
@@ -92,7 +94,7 @@ export default function Nav() {
       </div>
 
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -180,14 +182,14 @@ export default function Nav() {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="badge badge-sm indicator-item">{itemsCount}</span>
+            <span className="badge badge-sm indicator-item">
+              {cartItems.length}
+            </span>
           </div>
         </button>
       </div>
 
-      {cartOpen && (
-        <SidebarCart toggleCart={toggleCart} itemsCount={itemsCount} />
-      )}
+      {cartOpen && <SidebarCart toggleCart={toggleCart} />}
     </nav>
   );
 }

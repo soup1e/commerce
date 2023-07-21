@@ -1,19 +1,53 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useCartContext } from "@/components/CartContext";
 
-function SidebarCart({ toggleCart, itemsCount }) {
+function SidebarCart({ toggleCart }) {
+  const { cartItems } = useCartContext();
+  const [prices, setPrices] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/products`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPrices(data.prices);
+      })
+      .catch((error) => {
+        console.error("Product not Found", error);
+      });
+  }, []);
+
+  const stackedItems = cartItems.reduce((arr, item) => {
+    const existingItem = arr.find((stackedItem) => stackedItem.id === item.id);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      const price = prices.find((p) => p.id === item.default_price);
+      arr.push({ ...item, quantity: 1, price });
+    }
+    return arr;
+  }, []);
+
+  const totalCost = stackedItems.reduce((total, item) => {
+    if (item.price) {
+      total += (item.price.unit_amount / 100) * item.quantity;
+    }
+    return total;
+  }, 0);
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-lightDark bg-opacity-50"
       onClick={toggleCart}
     >
       <div
-        className="sidebar fixed bottom-0 right-0 z-50 h-screen w-80 bg-dark flex flex-col justify-between"
+        className="sidebar fixed bottom-0 right-0 z-50 h-screen w-80 bg-dark flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center p-2 border-b-2 border-gray-900">
           <div className="inline-flex font-bold text-lg p-4 text-gray-200">
-            Cart: {itemsCount}
+            Cart: {cartItems.length}
           </div>
           <button className="btn btn-circle btn-ghost m-4" onClick={toggleCart}>
             <svg
@@ -30,25 +64,43 @@ function SidebarCart({ toggleCart, itemsCount }) {
             </svg>
           </button>
         </div>
-        <div className="flex flex-col justify-between border-t-2 border-gray-900">
-          <div className="flex justify-between p-3 text-gray-400 font-normal">
-            <span>Shipping</span>
-            <span>$Cost</span>
-          </div>
-          <div className="flex justify-between p-3 text-gray-400 font-bold">
-            <span>Subtotal</span>
-            <span>$Cost</span>
-          </div>
-          <button className="flex justify-center py-2">
-            <Link
-              href="/cart"
-              onClick={toggleCart}
-              className="btn btn-square px-16"
+        <div className="overflow-auto flex-grow">
+          {stackedItems.map((item) => (
+            <div
+              key={item.id}
+              className="flex justify-between p-3 text-gray-400 font-normal"
             >
-              Checkout
-            </Link>
-          </button>
+              <span>{item.name}</span>
+              <span>
+                {item.price ? (
+                  <span>
+                    {(item.price.unit_amount / 100).toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}{" "}
+                    x {item.quantity}
+                  </span>
+                ) : (
+                  <span>Loading...</span>
+                )}
+              </span>
+            </div>
+          ))}
         </div>
+        <div className="flex justify-between p-3 text-gray-400 font-bold border-t-2 border-gray-900">
+          <span>Subtotal</span>
+          <span>
+            {totalCost.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
+          </span>
+        </div>
+        <button className="py-2">
+          <Link href="/cart" onClick={toggleCart} className="btn">
+            Checkout
+          </Link>
+        </button>
       </div>
     </div>
   );
