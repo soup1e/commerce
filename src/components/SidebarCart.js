@@ -5,7 +5,12 @@ import { useCartContext } from "@/components/CartContext";
 import getProducts from "@/utils/getProducts";
 
 function SidebarCart({ toggleCart }) {
-  const { cartItems } = useCartContext();
+  const {
+    cartItems,
+    removeFromCart,
+    addCartItemQuantity,
+    removeCartItemQuantity,
+  } = useCartContext();
   const [prices, setPrices] = useState([]);
 
   useEffect(() => {
@@ -15,6 +20,10 @@ function SidebarCart({ toggleCart }) {
     };
     fetchProducts();
   }, []);
+
+  const handleRemoveFromCart = (itemId) => {
+    removeFromCart(itemId);
+  };
 
   const stackedItems = cartItems.reduce((arr, item) => {
     const existingItem = arr.find((stackedItem) => stackedItem.id === item.id);
@@ -62,6 +71,7 @@ function SidebarCart({ toggleCart }) {
             </svg>
           </button>
         </div>
+
         <div className="overflow-auto flex-grow">
           {stackedItems.map((item) => (
             <div
@@ -69,22 +79,44 @@ function SidebarCart({ toggleCart }) {
               className="flex justify-between p-3 text-gray-400 font-normal"
             >
               <span>{item.name}</span>
-              <span>
+              <div>
                 {item.price ? (
-                  <span>
-                    {(item.price.unit_amount / 100).toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "USD",
-                    })}{" "}
-                    x {item.quantity}
-                  </span>
+                  <div className="flex items-center">
+                    <button
+                      className="btn btn-circle btn-ghost mx-1"
+                      onClick={() => removeCartItemQuantity(item.id)}
+                    >
+                      -
+                    </button>
+                    <span>{item.quantity}</span>
+                    <button
+                      className="btn btn-circle btn-ghost mx-1"
+                      onClick={() => addCartItemQuantity(item.id)}
+                    >
+                      +
+                    </button>
+                    <button
+                      className="btn btn-circle btn-ghost mx-1"
+                      onClick={() => handleRemoveFromCart(item.id)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path d="M19 6H5v2h14V6zm-3.6 7l-1.4 1.4L12 14.4l-2.6 2.6-1.4-1.4L10.6 13l-2.6-2.6 1.4-1.4L12 11.6l2.6-2.6 1.4 1.4L13.4 13zM18 2H6L4 4v2h16V4l-2-2zm-1 2H7v2h10V4zM6 20h12v-2H6v2z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 ) : (
                   <span>Loading...</span>
                 )}
-              </span>
+              </div>
             </div>
           ))}
         </div>
+
         <div className="flex justify-between p-3 text-gray-400 font-bold border-t-2 border-gray-900">
           <span>Subtotal</span>
           <span>
