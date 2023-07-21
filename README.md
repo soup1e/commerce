@@ -62,6 +62,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 4:20: renders dynamic item on page, Not sure if api call every time link is pressed is best practice
 - 5:00: Simple product page layout AND deployment
 
+## Friday, July 21th
+
+- 8:00 Plan for Today: Research Stripe, Search and Cart Feature
+- 9:00 Fixed Env, Research Stripe
+
 ## Layouts
 
 ![Layout](public/layout.jpg)
