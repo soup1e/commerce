@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import ItemCard from "./ItemCard";
 
-function ItemList() {
+function ItemList({ itemType }) {
   const [products, setProducts] = useState([]);
   const [prices, setPrices] = useState([]);
 
@@ -18,9 +18,13 @@ function ItemList() {
       });
   }, []);
 
+  const filteredProducts = itemType
+    ? products.filter((product) => product.unit_label === itemType)
+    : products;
+
   return (
     <div className="flex flex-wrap justify-center bg-dark">
-      {products.map((product) => {
+      {filteredProducts.map((product) => {
         const price = prices.find(
           (price) => price.id === product.default_price
         );

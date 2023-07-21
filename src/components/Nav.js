@@ -65,7 +65,7 @@ export default function Nav() {
                     <Link href="/collections/switches">Switches</Link>
                   </li>
                   <li>
-                    <Link href="/collections/switches">Other</Link>
+                    <Link href="/collections/deskmats">Desk Mats</Link>
                   </li>
                 </ul>
               </details>
@@ -116,7 +116,7 @@ export default function Nav() {
                   <Link href="/collections/switches">Switches</Link>
                 </li>
                 <li>
-                  <Link href="/collections/switches">Other</Link>
+                  <Link href="/collections/deskmats">Desk Mats</Link>
                 </li>
               </ul>
             </div>

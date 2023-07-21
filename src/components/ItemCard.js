@@ -13,7 +13,7 @@ function ItemCard({ price, product }) {
   return (
     <div className="card w-96">
       <div className="rounded-lg shadow-xl text-white bg-lightDark m-3">
-        <Link href={`/collections/${formattedURL}`}>
+        <Link href={`/products/${formattedURL}`}>
           <Image
             className="rounded-t-lg w-full"
             src="/placehold.jpg"
