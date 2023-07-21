@@ -2,20 +2,18 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useCartContext } from "@/components/CartContext";
+import getProducts from "@/utils/getProducts";
 
 function SidebarCart({ toggleCart }) {
   const { cartItems } = useCartContext();
   const [prices, setPrices] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/products`)
-      .then((response) => response.json())
-      .then((data) => {
-        setPrices(data.prices);
-      })
-      .catch((error) => {
-        console.error("Product not Found", error);
-      });
+    const fetchProducts = async () => {
+      const { prices } = await getProducts();
+      setPrices(prices);
+    };
+    fetchProducts();
   }, []);
 
   const stackedItems = cartItems.reduce((arr, item) => {

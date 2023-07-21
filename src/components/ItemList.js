@@ -1,21 +1,19 @@
 "use client";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ItemCard from "./ItemCard";
+import getProducts from "@/utils/getProducts";
 
 function ItemList({ itemType }) {
   const [products, setProducts] = useState([]);
   const [prices, setPrices] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/products`)
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data.products);
-        setPrices(data.prices);
-      })
-      .catch((error) => {
-        console.error("Product not Found", error);
-      });
+    const fetchProducts = async () => {
+      const { products, prices } = await getProducts();
+      setProducts(products);
+      setPrices(prices);
+    };
+    fetchProducts();
   }, []);
 
   const filteredProducts = itemType
