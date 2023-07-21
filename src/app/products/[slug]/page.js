@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useCartContext } from "@/components/CartContext";
 
 function ProductPage({ params }) {
   const [product, setProduct] = useState(null);
   const [price, setPrice] = useState(null);
+  const { addToCart } = useCartContext();
 
   useEffect(() => {
     const unformattedUrl = params.slug.toUpperCase().replace(/_/g, " ");
@@ -20,7 +22,7 @@ function ProductPage({ params }) {
         setProduct(findProduct);
 
         const findPrice = prices.find(
-          (price) => price.id === matchedProduct.default_price
+          (price) => price.id === findProduct.default_price
         );
 
         const unitAmountFormat = (findPrice.unit_amount / 100).toLocaleString(
@@ -43,6 +45,10 @@ function ProductPage({ params }) {
     );
   }
 
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
+
   return (
     <div className="min-h-screen bg-lightDark text-white">
       <div className="flex max-w-3xl mx-auto p-8">
@@ -63,7 +69,10 @@ function ProductPage({ params }) {
           </div>
           <h2 className="text-xl font-bold mb-4">Description</h2>
           <p className="text-gray-300 mb-4">{product.description}</p>
-          <button className="w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-md">
+          <button
+            className="w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-md"
+            onClick={handleAddToCart}
+          >
             Add to Cart
           </button>
         </div>
