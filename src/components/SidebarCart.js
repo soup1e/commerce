@@ -103,9 +103,13 @@ function SidebarCart({ toggleCart }) {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="w-4 h-4"
+                        className="w-6 h-6"
                       >
-                        <path d="M19 6H5v2h14V6zm-3.6 7l-1.4 1.4L12 14.4l-2.6 2.6-1.4-1.4L10.6 13l-2.6-2.6 1.4-1.4L12 11.6l2.6-2.6 1.4 1.4L13.4 13zM18 2H6L4 4v2h16V4l-2-2zm-1 2H7v2h10V4zM6 20h12v-2H6v2z"></path>
+                        <path
+                          fillRule="evenodd"
+                          d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                     </button>
                   </div>
