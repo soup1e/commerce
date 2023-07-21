@@ -67,6 +67,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 8:00 Plan for Today: Research Stripe, Search and Cart Feature
 - 9:00 Fixed Env, Research Stripe
 - 10:00 Products with type and Description, Dynamic Link refactor, Sort Item by type
+- 10:30 Research
 
 ## Layouts
 
