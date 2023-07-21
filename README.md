@@ -2,25 +2,13 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### ToDo
+### Capstone Project
 
-- SEARCH AND ITEM TYPES
-- ADD TO CART
-- CART CHECKOUT WITH STRIPE
-- REMAINING /ROUTES AND 404
-- AUTH AND ADMIN PAGES
-- UPDATE PRODUCTS SITE NAME AND BLANK FILLER TEXT
-- UPDATE LANDING PAGE AND FOOTER
-
-- Stretch: Switch to TypeScript, Mobile App
-
-### The App
-
-- E-Commerce Website where users can add things to cart and checkout using Stripe
-- Items should be stored in SupaBase or NextJS backend
-- User auth should be handled by Auth0
-- Multi-page App with Landing, Categories, Marketplace for User Items, Cart, Checkout and Order Comp
-- Light and dark mode styling
+- A Keyboard E-Commerce Website where users can add things to cart and checkout using Stripe
+- Multi-page App with Landing, Categories, Marketplace for User Items, Cart, Checkout and Dynamic Routes
+- Items and Price stored in Stripes API
+- Checkout Handled through Stripe
+- Mobile and Desktop Viewing Compatible
 
 ## Friday, July 7th
 
@@ -76,6 +64,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 3:45 Finally Working Quantities
 - 4:15 Stripe Payment Research
 - 4:40 Stripe Attempts Still don't work
+- 5:00 Vercel Deploy
 
 ## Layouts
 
