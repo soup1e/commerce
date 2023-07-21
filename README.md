@@ -75,6 +75,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 2:30 Refactor
 - 3:45 Finally Working Quantities
 - 4:15 Stripe Payment Research
+- 4:40 Stripe Attempts Still don't work
 
 ## Layouts
 

@@ -130,11 +130,17 @@ function SidebarCart({ toggleCart }) {
             })}
           </span>
         </div>
-        <button className="py-2">
-          <Link href="/cart" onClick={toggleCart} className="btn">
-            Checkout
-          </Link>
-        </button>
+        <form
+          className="flex justify-center"
+          action="/api/checkout"
+          method="POST"
+        >
+          <section>
+            <button className="btn" type="submit" role="link">
+              Checkout
+            </button>
+          </section>
+        </form>
       </div>
     </div>
   );
