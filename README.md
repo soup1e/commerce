@@ -71,6 +71,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 11:15 First Attempt at Add to cart, Cart adds items to array but resets on refresh
 - 12:00 Add to Cart works and is stored in local storage (use accounts later)
 - 1:30 Working Cart View Needs big refactor, I need to make less Api calls
+- 2:00 After Trying different ways to make less api calls I read [This](https://nextjs.org/docs/app/building-your-application/data-fetching#automatic-fetch-request-deduping)
 
 ## Layouts
 
