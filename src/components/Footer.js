@@ -5,15 +5,15 @@ export default function Footer() {
   return (
     <footer className="footer p-10 bg-lightDark text-gray-300">
       <div>
-        <span className="footer-title">Commerce.Store</span>
+        <span className="footer-title">store.sadams.dev</span>
         <p className="text-white">
           Blah Blah Blah <br />
           stuff about our store <br />
-          store@email.com
+          sam.adams7785@gmail.com
         </p>
       </div>
       <div>
-        <span className="footer-title">Store</span>
+        <span className="footer-title">Shop</span>
         <Link href="/store" className="link link-hover">
           All Products
         </Link>
@@ -22,6 +22,9 @@ export default function Footer() {
         </Link>
         <Link href="#" className="link link-hover">
           Category
+        </Link>
+        <Link href="#" className="link link-hover">
+          Search
         </Link>
       </div>
       <div>
@@ -32,24 +35,23 @@ export default function Footer() {
         <Link href="#" className="link link-hover">
           Contact
         </Link>
-        <Link href="#" className="link link-hover">
-          Search
-        </Link>
       </div>
       <div>
-        <span className="footer-title">News Letter</span>
+        <span className="footer-title">NEWSLETTER</span>
         <div className="form-control w-80">
           <label className="label">
-            <span className="label-text">Enter your email address</span>
+            <span className="label-text">
+              Stay up to date with releases and discounts!
+            </span>
           </label>
           <div className="relative">
             <input
               type="text"
-              placeholder="username@site.com"
+              placeholder="Email Address"
               className="input input-bordered w-full pr-16"
             />
-            <button className="btn absolute top-0 right-0 rounded-l-none">
-              Subscribe
+            <button className="btn btn-accent absolute top-0 right-0 rounded-l-none">
+              Submit
             </button>
           </div>
         </div>

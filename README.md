@@ -94,6 +94,10 @@ Is there anything else you'd like your instructor to know?
 - 4:40 Stripe Attempts Still don't work
 - 5:00 Vercel Deploy
 
+## Monday, July 24th
+
+- 4:00 Product Images, Footer Refactor Still Needs Work, Overall Viewing Changes
+
 ## Layouts
 
 ![Layout](public/layout.jpg)

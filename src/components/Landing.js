@@ -12,7 +12,7 @@ function Landing() {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Commerce Website</h1>
           <p className="mb-5">Shop our new websites products</p>
-          <button className="btn">
+          <button className="btn btn-accent">
             <Link href="/collections/all">Shop All</Link>
           </button>
         </div>

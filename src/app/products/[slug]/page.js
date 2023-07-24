@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useCartContext } from "@/components/CartContext";
-import getProducts from "@/utils/getProducts"; // Adjust the path based on your project structure
+import getProducts from "@/utils/getProducts";
 
 function ProductPage({ params }) {
   const [product, setProduct] = useState(null);
@@ -56,8 +56,8 @@ function ProductPage({ params }) {
   return (
     <div className="min-h-screen bg-lightDark text-white">
       {product && (
-        <div className="flex max-w-3xl mx-auto p-8">
-          <div className="w-1/2">
+        <div className="flex flex-col md:flex-row max-w-5xl mx-auto p-8">
+          <div className="w-full md:w-2/3 md:mr-8">
             <Image
               src="/placehold.jpg"
               width={2000}
@@ -67,15 +67,17 @@ function ProductPage({ params }) {
             />
           </div>
 
-          <div className="w-1/2 ml-8">
+          <div className="w-full md:w-1/3">
             <div className="flex items-center justify-between mb-4">
               <h1 className="text-3xl font-bold">{product.name}</h1>
               <span className="text-lg font-semibold">{price}</span>
             </div>
-            <h2 className="text-xl font-bold mb-4">Description</h2>
+            <h2 className="text-lg text-gray-200 font-bold mb-2">
+              Description
+            </h2>
             <p className="text-gray-300 mb-4">{product.description}</p>
             <button
-              className="w-full py-2 px-4 bg-indigo-500 hover:bg-indigo-600 text-white rounded-md"
+              className="btn btn-square btn-accent w-full"
               onClick={handleAddToCart}
             >
               Add to Cart

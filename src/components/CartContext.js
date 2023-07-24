@@ -17,7 +17,7 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
-    console.log(cartItems);
+    // console.log(cartItems);
   }, [cartItems]);
 
   const addToCart = (item) => {
@@ -30,7 +30,7 @@ export function CartProvider({ children }) {
 
   const addCartItemQuantity = (itemId) => {
     const cartItem = cartItems.find((item) => item.id === itemId);
-    console.log(cartItems);
+    // console.log(cartItems);
 
     if (!cartItem) {
       console.error("Item not Found");

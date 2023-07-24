@@ -21,7 +21,7 @@ function ItemList({ itemType }) {
     : products;
 
   return (
-    <div className="flex flex-wrap justify-center bg-dark">
+    <div className="flex flex-wrap justify-center p-4 bg-dark">
       {filteredProducts.map((product) => {
         const price = prices.find(
           (price) => price.id === product.default_price
