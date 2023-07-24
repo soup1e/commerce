@@ -4,11 +4,39 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Capstone Project
 
-- A Keyboard E-Commerce Website where users can add things to cart and checkout using Stripe
-- Multi-page App with Landing, Categories, Marketplace for User Items, Cart, Checkout and Dynamic Routes
-- Items and Price stored in Stripes API
+Name of Student: Sam Adams
+
+Name of Project: Keyboard E-Commerce
+
+Project's Purpose or Goal: A Keyboard E-Commerce Store where users can add things to cart and checkout using Stripe
+
+List the absolute minimum features the project requires to meet this purpose or goal:
+
+- Multi-page App with Landing, Categories, Cart, Checkout and Dynamic Routes
+- Items and Prices stored in Stripes API
 - Checkout Handled through Stripe
-- Mobile and Desktop Viewing Compatible
+
+What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
+
+- Next.js
+- Stripe
+- TailwindCSS
+- DaisyUI
+
+If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+
+Mobile App
+User Items, Login with Auth0
+TypeScript Refactor
+
+What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+
+- Auth0
+- TypeScript
+- React Native / Flutter
+- SupaBase
+
+Is there anything else you'd like your instructor to know?
 
 ## Friday, July 7th
 
