@@ -102,6 +102,7 @@ Is there anything else you'd like your instructor to know?
 ## Tuesday, July 25th
 
 - 1:00 Finally got database connected to auth, Tried Auth0, NextAuth Worked, Tried SupaBase but it was deprecated, Then I used prisma to connect to Neon.
+- 2:45 User session is logged in db and displays correct nav info
 
 ## Layouts
 
