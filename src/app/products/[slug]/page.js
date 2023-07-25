@@ -59,11 +59,12 @@ function ProductPage({ params }) {
         <div className="flex flex-col md:flex-row max-w-5xl mx-auto p-8">
           <div className="w-full md:w-2/3 md:mr-8">
             <Image
-              src="/placehold.jpg"
-              width={2000}
-              height={2000}
+              className="w-full h-full"
+              src={product.images[0]}
+              width={1024}
+              height={1024}
+              layout="responsive"
               alt="Product Image"
-              className="rounded-lg shadow-lg mb-4"
             />
           </div>
 

@@ -153,7 +153,10 @@ export default function Nav() {
             />
           </svg>
         </Link>
-        <Link className="btn btn-square btn-ghost hidden md:flex" href="/login">
+        <Link
+          className="btn btn-square btn-ghost hidden md:flex"
+          href="/api/auth/login"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
