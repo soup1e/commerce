@@ -97,6 +97,7 @@ Is there anything else you'd like your instructor to know?
 ## Monday, July 24th
 
 - 4:00 Product Images, Footer Refactor Still Needs Work, Overall Viewing Changes
+- 6:00 nav tip bar in products and
 
 ## Layouts
 

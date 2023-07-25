@@ -16,11 +16,11 @@ function ItemCard({ price, product }) {
         <Link href={`/products/${formattedURL}`}>
           <div className="relative rounded-t-lg overflow-hidden pb-[56.25%]">
             <Image
-              className="absolute top-0 left-0 w-full h-full"
+              className="responsive absolute top-0 left-0 w-full h-full"
               src={product.images[0]}
               width={1024}
               height={1024}
-              layout="responsive"
+              priority
               alt="Product Image"
             />
           </div>

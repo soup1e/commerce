@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useCartContext } from "@/components/CartContext";
 import getProducts from "@/utils/getProducts";
+import Link from "next/link";
 
 function ProductPage({ params }) {
   const [product, setProduct] = useState(null);
@@ -54,8 +55,19 @@ function ProductPage({ params }) {
   };
 
   return (
-    <div className="min-h-screen bg-lightDark text-white">
-      {product && (
+    product && (
+      <div className="min-h-screen bg-lightDark text-white">
+        <div className="md:flex hidden px-8 py-4 text-sm breadcrumbs">
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/collections/all">Collections</Link>
+            </li>
+            <li>{product.name}</li>
+          </ul>
+        </div>
         <div className="flex flex-col md:flex-row max-w-5xl mx-auto p-8">
           <div className="w-full md:w-2/3 md:mr-8">
             <Image
@@ -63,7 +75,6 @@ function ProductPage({ params }) {
               src={product.images[0]}
               width={1024}
               height={1024}
-              layout="responsive"
               alt="Product Image"
             />
           </div>
@@ -85,8 +96,8 @@ function ProductPage({ params }) {
             </button>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    )
   );
 }
 
