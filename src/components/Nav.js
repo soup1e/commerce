@@ -83,7 +83,7 @@ export default function Nav() {
             </li>
             <div className="divider" />
             <li>
-              <Link href="/login">Login</Link>
+              <Link href="/api/auth/signin">Login</Link>
             </li>
             <li>
               <Link href="/search">Search</Link>
@@ -155,7 +155,7 @@ export default function Nav() {
         </Link>
         <Link
           className="btn btn-square btn-ghost hidden md:flex"
-          href="/api/auth/login"
+          href="/api/auth/signin"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

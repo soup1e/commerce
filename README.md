@@ -99,6 +99,10 @@ Is there anything else you'd like your instructor to know?
 - 4:00 Product Images, Footer Refactor Still Needs Work, Overall Viewing Changes
 - 6:00 nav tip bar in products and
 
+## Tuesday, July 25th
+
+- 1:00 Finally got database connected to auth, Tried Auth0, NextAuth Worked, Tried SupaBase but it was deprecated, Then I used prisma to connect to Neon.
+
 ## Layouts
 
 ![Layout](public/layout.jpg)
