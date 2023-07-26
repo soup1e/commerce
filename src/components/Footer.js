@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import EmailForm from "./EmailForm";
 
 export default function Footer() {
   return (
@@ -45,14 +46,7 @@ export default function Footer() {
             </span>
           </label>
           <div className="relative">
-            <input
-              type="text"
-              placeholder="Email Address"
-              className="input input-bordered w-full pr-16"
-            />
-            <button className="btn btn-accent absolute top-0 right-0 rounded-l-none">
-              Submit
-            </button>
+            <EmailForm />
           </div>
         </div>
       </div>
