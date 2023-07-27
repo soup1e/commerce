@@ -82,7 +82,7 @@ export default function Nav() {
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <Link href="/search">Search</Link>
+              <Link href="/collections/all">Search</Link>
             </li>
           </ul>
         </div>
@@ -135,7 +135,7 @@ export default function Nav() {
 
         <Link
           className="btn btn-square btn-ghost hidden md:flex"
-          href="/search"
+          href="/collections/all"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

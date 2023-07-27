@@ -109,6 +109,7 @@ Is there anything else you'd like your instructor to know?
 ## Wednesday, July 26th
 
 - 3:00 Attempt at Prisma Post to Emails table failed for Newsletter.
+- 5:00 Working Search Logic.
 
 ## Layouts
 

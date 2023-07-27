@@ -6,6 +6,8 @@ import getProducts from "@/utils/getProducts";
 function ItemList({ itemType }) {
   const [products, setProducts] = useState([]);
   const [prices, setPrices] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -16,19 +18,33 @@ function ItemList({ itemType }) {
     fetchProducts();
   }, []);
 
-  const filteredProducts = itemType
-    ? products.filter((product) => product.unit_label === itemType)
-    : products;
+  useEffect(() => {
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(lowerCaseQuery)
+    );
+
+    setFilteredProducts(filteredProducts);
+  }, [searchQuery, products]);
 
   return (
-    <div className="flex flex-wrap justify-center p-4 bg-dark">
-      {filteredProducts.map((product) => {
-        const price = prices.find(
-          (price) => price.id === product.default_price
-        );
-        return <ItemCard key={product.id} product={product} price={price} />;
-      })}
-    </div>
+    <section className="bg-dark">
+      <section className="form-control p-4 w-[25%]">
+        <input
+          type="text"
+          placeholder="Search by product name..."
+          className="input input-bordered"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </section>
+      <section className="flex flex-wrap justify-center">
+        {filteredProducts.map((product) => {
+          const price = prices.find((price) => price.product === product.id);
+          return <ItemCard key={product.id} product={product} price={price} />;
+        })}
+      </section>
+    </section>
   );
 }
 
