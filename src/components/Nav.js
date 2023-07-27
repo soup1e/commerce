@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { useCartContext } from "@/components/CartContext";
+import { useCartContext } from "@/app/CartContext";
 import SidebarCart from "./SidebarCart";
 import Session from "./NavSession";
 
@@ -72,9 +72,9 @@ export default function Nav() {
               </details>
             </li>
 
-            <li>
+            {/* <li>
               <Link href="/market">Community Market</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/about">About</Link>
             </li>
@@ -118,9 +118,9 @@ export default function Nav() {
               </ul>
             </div>
           </li>
-          <li>
+          {/* <li>
             <Link href="/market">Community Market</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/about">About</Link>
           </li>

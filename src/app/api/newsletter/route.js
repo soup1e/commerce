@@ -1,21 +1,23 @@
-import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
+import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-export async function POST(req) {
-  try {
-    const { email } = await req.json();
-
-    const record = await prisma.email.create({
-      data: {
-        name: "Email",
-      },
-    });
-
-    return NextResponse.json(record);
-  } catch (error) {
-    console.error("Error creating record:", error);
-    return NextResponse.error("Internal Server Error", 500);
-  }
+export async function POST(request) {
+  // const formData = request.body;
+  // console.log(formData);
+  // try {
+  //   await prisma.email.create({
+  //     data: {
+  //       name: formData.email,
+  //     },
+  //   });
+  //   return;
+  // } catch (error) {
+  //   console.error("Error while saving email:", error);
+  //   return NextResponse.status(500).json({
+  //     success: false,
+  //     error: "Internal Server Error",
+  //   });
+  // }
 }

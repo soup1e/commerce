@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ItemCard from "./ItemCard";
 import getProducts from "@/utils/getProducts";
 
-function ItemList({ itemType }) {
+function ItemList() {
   const [products, setProducts] = useState([]);
   const [prices, setPrices] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");

@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useCartContext } from "@/components/CartContext";
+import { useCartContext } from "@/app/CartContext";
 import getProducts from "@/utils/getProducts";
+import CheckoutButton from "./CheckoutButton";
 
 function SidebarCart({ toggleCart }) {
   const {
@@ -132,17 +132,10 @@ function SidebarCart({ toggleCart }) {
             })}
           </span>
         </div>
-        <form
-          className="flex justify-center"
-          action="/api/checkout"
-          method="POST"
-        >
-          <section>
-            <button className="btn btn-accent" type="submit" role="link">
-              Checkout
-            </button>
-          </section>
-        </form>
+
+        <section className="flex justify-center">
+          <CheckoutButton />
+        </section>
       </div>
     </div>
   );
