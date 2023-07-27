@@ -7,11 +7,9 @@ export async function POST(req) {
   try {
     const { email } = await req.json();
 
-    console.log({ email });
-    const record = await prisma.emails.create({
+    const record = await prisma.email.create({
       data: {
-        id: "id1",
-        email: "NewEmail!",
+        name: "Email",
       },
     });
 

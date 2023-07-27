@@ -6,8 +6,6 @@ export default function NavSession() {
   const { data: session, status } = useSession();
 
   if (status === "authenticated") {
-    console.log(session);
-
     return (
       <button className="dropdown dropdown-end btn btn-square btn-ghost">
         <label tabIndex={0} className="avatar dropdown-button mt-1">

@@ -76,9 +76,11 @@ function SidebarCart({ toggleCart }) {
           {stackedItems.map((item) => (
             <div
               key={item.id}
-              className="flex justify-between p-3 text-gray-400 font-normal"
+              className="flex justify-between p-3 text-white font-normal"
             >
-              <span>{item.name}</span>
+              <span className="text-white text-sm font-light flex items-center">
+                {item.name}
+              </span>
               <div>
                 {item.price ? (
                   <div className="flex items-center">
@@ -136,7 +138,7 @@ function SidebarCart({ toggleCart }) {
           method="POST"
         >
           <section>
-            <button className="btn" type="submit" role="link">
+            <button className="btn btn-accent" type="submit" role="link">
               Checkout
             </button>
           </section>

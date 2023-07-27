@@ -8,23 +8,26 @@ export default function Footer() {
       <div>
         <span className="footer-title">store.sadams.dev</span>
         <p className="text-white">
-          Blah Blah Blah <br />
-          stuff about our store <br />
+          Key-Commerce <br />
+          Buy lots of Stuff! <br />
           sam.adams7785@gmail.com
         </p>
       </div>
       <div>
         <span className="footer-title">Shop</span>
-        <Link href="/store" className="link link-hover">
+        <Link href="/collections/all" className="link link-hover">
           All Products
         </Link>
-        <Link href="#" className="link link-hover">
-          Type
+        <Link href="/collections/keyboards" className="link link-hover">
+          Keyboards
         </Link>
-        <Link href="#" className="link link-hover">
-          Category
+        <Link href="/collections/keycaps" className="link link-hover">
+          Keycaps
         </Link>
-        <Link href="#" className="link link-hover">
+        <Link href="/collections/switches" className="link link-hover">
+          Switches
+        </Link>
+        <Link href="/collections/all" className="link link-hover">
           Search
         </Link>
       </div>
