@@ -29,14 +29,16 @@ function ItemList() {
 
   return (
     <section className="bg-dark">
-      <section className="form-control p-4 w-[25%]">
-        <input
-          type="text"
-          placeholder="Search by product name..."
-          className="input input-bordered"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+      <section className="flex justify-center">
+        <form className="form-control p-4 w-full max-w-lg">
+          <input
+            type="text"
+            placeholder="Search by product name..."
+            className="input input-bordered"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </form>
       </section>
       <section className="flex flex-wrap justify-center">
         {filteredProducts.map((product) => {
